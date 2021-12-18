@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/cv.css">
+    <script src="/static/js/cv.js"> </script>
+    <title>Ori CV</title>
+</head>
+<body>
+{% include 'header.html' %}
+    <div id="GridContainer">
+        <div id="item1"><h1>Ori Milbuaer</h1>
+        <h3>Business Analyst, Wix.com</h3>
+        <h3>Industrial Engenering Stuedent, 4th year</h3>
+    </div>
+    <div id="picture">
+        <img id="orimi" src="/static/img/cvimage.jpeg" alt="ori milbaeur" >
+    </div>
+        <div id="item2"><h1>Contact Me</h1>
+            <!-- action- to where in the server to send the form (after the submit)-->
+            <form action="" id="form1">
+                <lable  for="Name">Full Name </lable> <br>
+                <!-- id connect to the for field -->
+                <input type="text" id="Name" name="Name" minlength="6" maxlength="20"><br> <br>
+                <lable for="">Phone number </lable><br>
+                <input type="number"><br> <br>
+                <lable for=""> Email Address </address></lable><br>
+                <input type="email"><br> <br>
+                <lable for=""> Passward </lable><br>
+                <input type="passward" id="Pass" minlength="6" maxlength="16"><br> <br>
+                <lable for="">More Info</lable><br>
+                <textarea name="" id="" cols="" rows=""></textarea><br> <br>
+                <input type="submit" id="form1" onclick="inputValidity()"><br>
+                <!-- <p id="errorName">Min length 6, max length 20</p> -->
+            </form>
+            <p id="errorName"></p>
+            <p id="errorPass"></p>
+        </div>
+        <div id="item3">
+            <h1>About Me</h1>
+            <h2>Military Service</h2>
+            <h3>2015-2018 | Logistic coordinator officer in the Navy</h3>
+            <p>Managing a direct staff of soldiers.
+                 Was responsible of the process of optimization and adjusting work procedures by 'ISO' standards.<br>
+                Job requirement: risks assessment, providing high level service, and working under pressure.</p>
+            </p>
+            <h2>Work Experience</h2>
+            <h3>2021-current | Business Analyst at Wix.com</h3>
+            <p>Analyst of 'Branded App' team at Wix.
+            </p>
+            <h2>Volunteering</h2>
+            <h3>2020-current |Media and Marketing team at "Forum 20-80 BGU"</h3>
+            <p>Forum 20-80 is an voluntary organization of IEM students at BGU University. <br>
+                We organize meetups, workshops, mentoring programs, professional tours, social activities, and more.
+            </p>
+            <h3>2019 |Volunteer in 'Tavel b'Tzedek'-Nepal</h3>
+            <p>Took part in a voluntary Israeli delegation for three weeks in 'Dhunkharke' area, Nepal.
+            </p>
+
+        </div>
+    </div>
+{% include 'footer.html' %}
+</body>
+</html>

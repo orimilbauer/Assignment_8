@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="/static/css/mycss.css">
+</head>
+<body>
+{% include 'header.html' %}
+{% block content %}
+{#    will override it in the extend#}
+    <h5> This is Ori Milbauer's tasks</h5>
+{% endblock %}
+{% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,43 @@
+{#extend is for the base templet- and here only change the relevent block#}
+{% extends 'base.html' %}
+{% block title%}
+    Assignment_8
+{% endblock %}
+
+{% block content%}
+{#  super-   to add what have in the block and not override from basw#}
+    {{ super() }}
+
+     Assignment_8<br>
+
+     {% set page_name='Assignment_8' %}
+{% if name %}
+    <h3>you looged in</h3>
+{% else%}
+     <h3>enter your name</h3>
+       <!--remember END the if!!! -->
+{% endif %}
+<h1> welcome {{ page_name }} !</h1>
+<h2> Name:  {{ name | default('unknown',true) |upper() }} {{ second_name|upper() }}</h2>
+<!--remember END the if!!! -->;
+<h2 class={% if name %} logged_in{% else %} stranger {% endif %}> University: {{ uni| default('unspecified',true) }}</h2>
+<h2> Favourit music: </h2>
+<h6>
+    <ol>
+    {% for music in musics %}
+    <li>{{ music }}</li>
+    {% endfor %}
+</ol>
+    </h6>
+{% endblock %}
+ <!--true in the default how do you want to reffer to empty input (as default- true) -->
+  <!--ninja -->
+   <!--define veriable in the html page -->
+
+{#for dectionary!! #}
+{#<ol>
+{#    {% for key,value in profile.items() %}#}
+{#    <li><{{ key }} : {{ value |upper() }}/li>#}
+{#    {% endfor %}#}
+{#</ol>#}
+{#{% endblock %}#}
